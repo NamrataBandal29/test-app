@@ -20,8 +20,10 @@ const Body = () =>{
         <div className="body">
             <div className="search">Search</div>
             <div className="cart-iteam">
-                <Cart />
-                <Cart />
+                {ListData.map((res) =>
+                <Cart key={res.info.id} resData={res} />)}
+                
+
             </div>
         </div>
     )
